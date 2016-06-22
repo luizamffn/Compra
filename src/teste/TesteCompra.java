@@ -17,7 +17,7 @@ public class TesteCompra {
 		
 		compra.adicionarProduto(sabonete);
 		compra.adicionarProduto(cadeira);
-		compra.caucularValorTotalDaCompra();
+		compra.calcularValorTotalDaCompra();
 		
 		System.out.println(compra.getValorTotal());
 		Desconto desconto = new Desconto(compra);

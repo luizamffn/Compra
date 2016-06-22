@@ -17,7 +17,7 @@ public class Compra {
 		itens.add(item);
 	}
 	
-	public void caucularValorTotalDaCompra(){
+	public void calcularValorTotalDaCompra(){
 		this.valorTotal = 0;
 		for (Item item : itens) {
 			this.valorTotal += 	item.getValorTotalItem();
