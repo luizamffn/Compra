@@ -13,8 +13,6 @@ public class Compra {
 		this.cliente = cliente;
 	}
 
-	
-	
 	public void adicionarProduto(Item item){
 		itens.add(item);
 	}
@@ -29,9 +27,7 @@ public class Compra {
 	public List<Item> getItens() {
 		return itens;
 	}
-	public void setItens(List<Item> itens) {
-		this.itens = itens;
-	}
+
 	public Cliente getCliente() {
 		return cliente;
 	}
