@@ -5,6 +5,7 @@ import modelo.Item;
 
 public class Desconto {
 	private Compra compra;
+	private double valorPontos;
 	
 	public Desconto(Compra compra) {
 		this.compra = compra;
@@ -16,6 +17,9 @@ public class Desconto {
 	public void descontoPontuacaoMil(){
 		if(compra.getCliente().getPontos() >= 1000){
 			compra.setValorTotal(compra.getValorTotal() - compra.getValorTotal()* 0.05);
+			valorPontos = compra.getCliente().getPontos();
+			compra.getCliente().setPontos(valorPontos - (compra.getValorTotal() * 0.05));
+			
 		}		
 	}
 	
