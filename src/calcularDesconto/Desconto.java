@@ -14,23 +14,17 @@ public class Desconto {
 	}
 
 	public void descontoPontuacaoMil(){
-		if(compra.getCliente().getPontos() >= 1000){
-			compra.setValorTotal(compra.getValorTotal() - compra.getValorTotal()* 0.05);
-		}		
+		compra.setValorTotal(compra.getCliente().getPontos() >= 1000 ? compra.getValorTotal() - compra.getValorTotal()* 0.05 : compra.getValorTotal());	
 	}
 	
 	public void descontoQuantidadeItem20(){
 		for (Item item : compra.getItens()) {
-			if(item.getQuantidade() >=20){
-				compra.setValorTotal(compra.getValorTotal() - (item.getValorTotalItem()* 0.2));
-			}
+			compra.setValorTotal(item.getQuantidade() >=20 ? compra.getValorTotal() - (item.getValorTotalItem()* 0.2) : compra.getValorTotal());
 		}
 	}
 	
 	public void descontoValorToralMaiorQueMil(){
-		if(compra.getValorTotal() > 1000){
-			compra.setValorTotal(compra.getValorTotal() - compra.getValorTotal()* 0.2);
-		}
+		compra.setValorTotal(compra.getValorTotal() > 1000 ? compra.getValorTotal() - compra.getValorTotal()* 0.2 : compra.getValorTotal());
 	}
 
 	public Compra getCompra() {
