@@ -1,14 +1,13 @@
 package modelo;
 
 public class Item {
-	
+
 	private String nome;
 	private int quantidade;
 	private double valor;
 	private double valorTotalItem;
-	
+
 	public Item(String nome, int quantidade, double valor) {
-		super();
 		this.nome = nome;
 		this.quantidade = quantidade;
 		this.valor = valor;
@@ -18,7 +17,7 @@ public class Item {
 	public void calcularValorTotal(){
 		valorTotalItem = quantidade * valor;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}

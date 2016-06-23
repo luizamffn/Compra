@@ -5,7 +5,7 @@ import modelo.Item;
 
 public class Desconto {
 	private Compra compra;
-	
+
 	public Desconto(Compra compra) {
 		this.compra = compra;
 		descontoPontuacaoMil();
@@ -15,21 +15,21 @@ public class Desconto {
 
 	public void descontoPontuacaoMil(){
 		if(compra.getCliente().getPontos() >= 1000){
-			compra.setValorTotal(compra.getValorTotal() - compra.getValorTotal()* 0.05);
-		}		
+			compra.setValorTotal(compra.getValorTotal() - compra.getValorTotal() * 0.05);
+		}
 	}
-	
+
 	public void descontoQuantidadeItem20(){
 		for (Item item : compra.getItens()) {
-			if(item.getQuantidade() >=20){
-				compra.setValorTotal(compra.getValorTotal() - (item.getValorTotalItem()* 0.2));
+			if (item.getQuantidade() >= 20){
+				compra.setValorTotal(compra.getValorTotal() - (item.getValorTotalItem() * 0.2));
 			}
 		}
 	}
-	
+
 	public void descontoValorToralMaiorQueMil(){
-		if(compra.getValorTotal() > 1000){
-			compra.setValorTotal(compra.getValorTotal() - compra.getValorTotal()* 0.2);
+		if (compra.getValorTotal() > 1000){
+			compra.setValorTotal(compra.getValorTotal() - compra.getValorTotal() * 0.2);
 		}
 	}
 

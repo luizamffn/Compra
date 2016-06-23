@@ -1,10 +1,11 @@
 package modelo;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
 
 public class Compra {
-	
-	private List<Item> itens;
+
+    private List<Item> itens;
 	private Cliente cliente;
 	private double valorTotal;
 
@@ -13,21 +14,19 @@ public class Compra {
 		this.cliente = cliente;
 	}
 
-	
-	
 	public void adicionarProduto(Item item){
 		itens.add(item);
 	}
-	
+
 	public void caucularValorTotalDaCompra(){
 		this.valorTotal = 0;
 		for (Item item : itens) {
 			this.valorTotal += 	item.getValorTotalItem();
 		}
 	}
-	
+
 	public List<Item> getItens() {
-		return itens;
+		return Collections.unmodifiableList(itens);
 	}
 	public void setItens(List<Item> itens) {
 		this.itens = itens;
