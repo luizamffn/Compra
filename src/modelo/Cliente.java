@@ -1,12 +1,11 @@
 package modelo;
 
 public class Cliente {
-	
+
 	private String nome;
 	private int pontos;
-	
+
 	public Cliente(String nome, int pontos) {
-		super();
 		this.nome = nome;
 		this.pontos = pontos;
 	}
@@ -26,6 +25,6 @@ public class Cliente {
 	public void setPontos(int pontos) {
 		this.pontos = pontos;
 	}
-	
-	
+
+
 }
